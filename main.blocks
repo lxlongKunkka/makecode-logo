@@ -1,0 +1,34 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="0HPrGD_=bkowKA_u=vzW">sprite</variable></variables><block type="pxt-on-start" id="LS}t/Z`$7)NSfRK5zLFz" x="0" y="0"><statement name="HANDLER"><block type="typescript_statement" id=":c7/=Kka*JRbQsaS]?D4" editable="false"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="let sprite: Sprite = null" numlines="1" declaredvars="sprite"></mutation><next><block type="variables_set" id=":I[@)AYnW(v.MT){z`,9"><field name="VAR" id="0HPrGD_=bkowKA_u=vzW">sprite</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id=".KMO1=1;sD@ken8*m^e5"><value name="img"><shadow type="screen_image_picker" id="T(:`~@^@Fk(A[x_^%tEI"><field name="img">img`
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb1bbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb11bbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb111bbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb1111bbbbbbbbbbbbb
+bbbbbbbbbbbbbbb11111bbbbbbbbbbbb
+111111111111111111111bbbbbbbbbbb
+1111111111111111111111bbbbbbbbbb
+11111111111111111111111bbbbbbbbb
+111111111111111111111111bbbbbbbb
+1111111111111111111111111bbbbbbb
+111111111111111111111111bbbbbbbb
+11111111111111111111111bbbbbbbbb
+1111111111111111111111bbbbbbbbbb
+111111111111111111111bbbbbbbbbbb
+bbbbbbbbbbbbbbb11111bbbbbbbbbbbb
+bbbbbbbbbbbbbbb1111bbbbbbbbbbbbb
+bbbbbbbbbbbbbbb111bbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb11bbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb1bbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+`</field><data>{"commentRefs":[],"fieldData":{"img":"T(:`~@^@Fk(A[x_^%tEI"}}</data></shadow></value></block></value><next><block type="typescript_statement" id="]d6UV~)|Ch_,_WWQ@Gwr" editable="false"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="function encode(img: Image, col = 1) {" line1="    let bits: number[] = []" line2="    for (let x = 0; x &lt; img.width; ++x)" line3="        for (let y = 0; y &lt; img.height; ++y) {" line4="            if (img.getPixel(x, y) == col) bits.push(1)" line5="            else bits.push(0)" line6="        }" line7="    let enc = [img.width, img.height, 0]" line8="    for (let i = 0; i &lt; bits.length;) {" line9="        let j = i" line10="        let b = bits[i]" line11="        while (j &lt; bits.length &amp;&amp; bits[j] === bits[i])" line12="            j++" line13="        let num = j - i" line14="        if (num &gt; 63) num = 63" line15="        if (num &gt;= 7) {" line16="            enc.push(0x80 | (b ? 0x40 : 0x00) | num)" line17="            i += num" line18="        } else {" line19="            num = 7" line20="            let mask = 0x01" line21="            let e = 0x00" line22="            while (num--) {" line23="                if (bits[i++]) e |= mask" line24="                mask &lt;&lt;= 1" line25="            }" line26="            enc.push(e)" line27="        }" line28="    }" line29="    enc[2] = enc.length - 3" line30="    return enc.map(n =&gt; n + &quot;&quot;).join(&quot;, &quot;)" line31="}" numlines="32"></mutation><next><block type="typescript_statement" id="L*,Sv,cKyAq*IG`PJyO*" editable="false"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="console.log(encode(sprite.image))" numlines="1"></mutation></block></next></block></next></block></next></block></statement></block></xml>
